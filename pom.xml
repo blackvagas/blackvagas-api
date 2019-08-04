@@ -115,7 +115,6 @@
 					<configuration>
 						<excludes>
 							<exclude>br/com/blackvagas/usecase/entity/*</exclude>
-							<exclude>br/com/blackvagas/configuration/*</exclude>
 						</excludes>
 					</configuration>
 					<executions>
