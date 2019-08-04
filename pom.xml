@@ -21,31 +21,6 @@
 		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
 	</properties>
 
-	<profiles>
-		<profile>
-			<id>sonar</id>
-			<properties>
-				<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-				<sonar.organization>black-vagas</sonar.organization>
-				<sonar.projectKey>black-vagas_blackvagasapi</sonar.projectKey>
-				<sonar.login>1f913d5943fe48f7f662dd06b2a6cf0a2dda35d0</sonar.login>
-
-			</properties>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.jacoco</groupId>
-						<artifactId>jacoco-maven-plugin</artifactId>
-					</plugin>
-					<plugin>
-						<groupId>org.sonarsource.scanner.maven</groupId>
-						<artifactId>sonar-maven-plugin</artifactId>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
