@@ -20,7 +20,7 @@
 		<lombok.version>1.16.22</lombok.version>
 		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
 	</properties>
-	
+
 	<profiles>
 		<profile>
 			<id>sonar</id>
@@ -29,7 +29,7 @@
 				<sonar.organization>black-vagas</sonar.organization>
 				<sonar.projectKey>black-vagas_blackvagasapi</sonar.projectKey>
 				<sonar.login>1f913d5943fe48f7f662dd06b2a6cf0a2dda35d0</sonar.login>
-				
+
 			</properties>
 			<build>
 				<plugins>
