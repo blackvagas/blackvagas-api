@@ -172,6 +172,13 @@
 					<configuration>
 						<mainClass>br.com.blackvagas.BlackVagasApiApplication</mainClass>
 					</configuration>
+					<executions>
+						<execution>
+							<goals>
+								<goal>repackage</goal>
+							</goals>
+						</execution>
+					</executions>
 				</plugin>
 			</plugins>
 		</pluginManagement>
