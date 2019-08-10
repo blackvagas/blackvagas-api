@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 public class User {
 
 	private Long id;
-	
+
 }
