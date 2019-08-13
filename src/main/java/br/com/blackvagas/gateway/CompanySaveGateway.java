@@ -1,9 +1,13 @@
 package br.com.blackvagas.gateway;
 
-import br.com.blackvagas.usecase.entity.User;
+import java.util.List;
+
+import br.com.blackvagas.usecase.entity.Company;
 
 public interface CompanySaveGateway {
 
-	public User saveUser(User user);
-	
+	public Company saveCompany(Company company);
+
+	public List<Company> listAll();
+
 }

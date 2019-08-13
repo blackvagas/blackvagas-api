@@ -1,9 +1,9 @@
 package br.com.blackvagas.gateway;
 
-import br.com.blackvagas.usecase.entity.User;
+import br.com.blackvagas.usecase.entity.Vacancy;
 
 public interface VacancySaveGateway {
 
-	public User saveUser(User user);
-	
+	public Vacancy saveVacancy(Vacancy vacancy);
+
 }
