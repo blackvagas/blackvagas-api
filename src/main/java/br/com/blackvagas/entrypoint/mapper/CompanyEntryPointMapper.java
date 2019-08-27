@@ -3,18 +3,15 @@ package br.com.blackvagas.entrypoint.mapper;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.springframework.stereotype.Component;
-
 import br.com.blackvagas.entrypoint.model.CompanyModel;
 import br.com.blackvagas.usecase.entity.Company;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 
-@Component
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class CompanyEntryPointProviderMapper {
+public class CompanyEntryPointMapper {
 
-	public Company from(CompanyModel model) {
+	public static Company from(CompanyModel model) {
 		return Company.builder()
 					  .id(model.getId())
 					  .adress(model.getAdress())
@@ -23,7 +20,7 @@ public class CompanyEntryPointProviderMapper {
 					  .build();
 	}
 
-	public CompanyModel from(Company core) {
+	public static CompanyModel from(Company core) {
 		return CompanyModel.builder()
 				  .id(core.getId())
 				  .adress(core.getAdress())
@@ -32,8 +29,8 @@ public class CompanyEntryPointProviderMapper {
 				  .build();
 	}
 	
-	public List<CompanyModel> from(List<Company> listCore) {
-		return listCore.stream().map(l -> from(l)).collect(Collectors.toList());
+	public static List<CompanyModel> from(List<Company> listCore) {
+		return listCore.stream().map(CompanyEntryPointMapper::from).collect(Collectors.toList());
 	}
 
 }

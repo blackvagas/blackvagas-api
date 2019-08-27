@@ -11,7 +11,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class VacancyDataProviderMapper {
 
-	public Vacancy from(VacancyEntity entity) {
+	public static Vacancy from(VacancyEntity entity) {
 		return Vacancy.builder()
 				.id(entity.getId())
 				.company(entity.getCompany())
@@ -22,7 +22,7 @@ public class VacancyDataProviderMapper {
 				.build();
 	}
 	
-	public VacancyEntity from(Vacancy core) {
+	public static VacancyEntity from(Vacancy core) {
 		return VacancyEntity.builder()
 				.id(core.getId())
 				.company(core.getCompany())

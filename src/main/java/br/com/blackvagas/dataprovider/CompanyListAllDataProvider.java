@@ -2,6 +2,8 @@ package br.com.blackvagas.dataprovider;
 
 import static br.com.blackvagas.dataprovider.mapper.CompanyDataProviderMapper.from;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Component;
@@ -9,28 +11,27 @@ import org.springframework.stereotype.Component;
 import br.com.blackvagas.Exception.TechnicalException;
 import br.com.blackvagas.dataprovider.repository.CompanyRepository;
 import br.com.blackvagas.dataprovider.repository.entity.CompanyEntity;
-import br.com.blackvagas.gateway.CompanySaveGateway;
+import br.com.blackvagas.gateway.CompanyListAllGateway;
 import br.com.blackvagas.usecase.entity.Company;
 import lombok.extern.slf4j.Slf4j;
 
 @Component
 @Slf4j
-public class CompanySaveDataProvider implements CompanySaveGateway {
+public class CompanyListAllDataProvider implements CompanyListAllGateway {
 
 	private CompanyRepository repository;
 
 	@Autowired
-	public CompanySaveDataProvider(CompanyRepository repository) {
+	public CompanyListAllDataProvider(CompanyRepository repository) {
 		this.repository = repository;
 	}
 
 	@Override
-	public Company saveCompany(Company company) {
+	public List<Company> listAll() {
 		try {
 
-			CompanyEntity entity = from(company);
-			CompanyEntity entitySaved = repository.save(entity);
-			return from(entitySaved);
+			List<CompanyEntity> listCompanyEntity = repository.findAll();
+			return from(listCompanyEntity);
 
 		} catch (DataAccessException e) {
 			log.error(e.getMessage(), e);
