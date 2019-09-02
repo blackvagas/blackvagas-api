@@ -6,5 +6,5 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-public abstract class ConfigurationEntityIntegrationTest {
+public abstract class ConfigurationEntityIntegrationDBTest {
 }

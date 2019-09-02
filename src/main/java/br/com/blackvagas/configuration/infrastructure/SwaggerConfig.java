@@ -36,6 +36,7 @@ public class SwaggerConfig {
 						.tags(new Tag("Company", "Rest API for Company"));
 	}
 	
+	@SuppressWarnings("unused")
 	private List<ResponseMessage> listResponseMessage(){
 		List<ResponseMessage> listResponse = new ArrayList<>();
 		

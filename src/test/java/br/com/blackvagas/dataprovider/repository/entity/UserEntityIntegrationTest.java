@@ -8,10 +8,10 @@ import java.util.Optional;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import br.com.blackvagas.configuration.ConfigurationEntityIntegrationTest;
+import br.com.blackvagas.configuration.ConfigurationEntityIntegrationDBTest;
 import br.com.blackvagas.dataprovider.repository.UserRepository;
 
-public class UserEntityIntegrationTest extends ConfigurationEntityIntegrationTest {
+public class UserEntityIntegrationTest extends ConfigurationEntityIntegrationDBTest {
 
 	@Autowired
 	private UserRepository repository;
